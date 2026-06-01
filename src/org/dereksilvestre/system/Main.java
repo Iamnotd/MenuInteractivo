@@ -10,7 +10,6 @@ public class Main {
         MenuPrincipalView menuPrincipalView = new MenuPrincipalView(); 
         OperacionesMatematicasView mathView = new OperacionesMatematicasView();
         OperacionesMatematicasController mathCtrl = new OperacionesMatematicasController();
-        
         int opcionMenu;
 
         do {
@@ -27,6 +26,12 @@ public class Main {
                                 double pago = mathView.pedirDouble("Ingrese el pago por hora: ");
                                 double salarioTotal = mathCtrl.calcularSalario(horas, pago);
                                 mathView.mostrarResultado("-> El salario total es: Q" + salarioTotal);
+                                break;
+                            case 2:
+                                double base = mathView.pedirDouble("Ingrese la bsae del triangulo: ");
+                                double altura = mathView.pedirDouble("Ingrese la altura del triangulo: ");
+                                double area = mathCtrl.calcularAreaTriangulo(base, altura);
+                                mathView.mostrarResultado("-> El Area del triaungulo es: " + area);
                                 break;
                             case 0:
                                 break;

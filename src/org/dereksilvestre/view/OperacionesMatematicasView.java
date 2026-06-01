@@ -12,6 +12,7 @@ public class OperacionesMatematicasView {
     public int mostrarSubMenuMatematicas() {
         System.out.println("\n--- MODULO A: OPERACIONES MATEMATICAS ---");
         System.out.println("1. Calculadora de Salario");
+        System.out.println("2. Area de un Triangulo");
         System.out.println("0. Volver al Menú Principal");
         System.out.print("Seleccione un ejercicio: ");
         
