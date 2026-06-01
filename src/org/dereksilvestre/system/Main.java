@@ -1,39 +1,51 @@
 package org.dereksilvestre.system;
-/**
- *
- * @author Dere Silvestre
- */
+
+import org.dereksilvestre.controller.OperacionesMatematicasController;
 import org.dereksilvestre.view.MenuPrincipalView;
+import org.dereksilvestre.view.OperacionesMatematicasView;
 
 public class Main {
     public static void main(String[] args) {
-        // Instancia de la vista para manejar la interacción (UI)
-        ConsoleView view = new ConsoleView();
+        
+        MenuPrincipalView menuPrincipalView = new MenuPrincipalView(); 
+        OperacionesMatematicasView mathView = new OperacionesMatematicasView();
+        OperacionesMatematicasController mathCtrl = new OperacionesMatematicasController();
+        
         int opcionMenu;
 
-        // Estructura do-while sugerida para mantener el programa en ejecución
         do {
-            opcionMenu = view.mostrarMenuPrincipal();
+            opcionMenu = menuPrincipalView.mostrarMenuPrincipal();
 
-            // Estructura switch para la selección de opciones del menú
             switch (opcionMenu) {
                 case 1:
-                    view.mostrarMensaje("\n[Módulo A: Operaciones Matemáticas seleccionado]");
-                    // TODO: Integrar submenú de operaciones matemáticas en los siguientes commits
+                    int ejercicioMath;
+                    do {
+                        ejercicioMath = mathView.mostrarSubMenuMatematicas();
+                        switch (ejercicioMath) {
+                            case 1:
+                                double horas = mathView.pedirDouble("Ingrese las horas trabajadas: ");
+                                double pago = mathView.pedirDouble("Ingrese el pago por hora: ");
+                                double salarioTotal = mathCtrl.calcularSalario(horas, pago);
+                                mathView.mostrarResultado("-> El salario total es: Q" + salarioTotal);
+                                break;
+                            case 0:
+                                break;
+                            default:
+                                mathView.mostrarResultado("Opción no válida en este submódulo.");
+                        }
+                    } while (ejercicioMath != 0);
                     break;
                 case 2:
-                    view.mostrarMensaje("\n[Módulo B: Manipulación de Cadenas seleccionado]");
-                    // TODO: Integrar submenú de cadenas en los siguientes commits
+                    // Módulo B
                     break;
                 case 3:
-                    view.mostrarMensaje("\n[Módulo C: Lógica y Booleanos seleccionado]");
-                    // TODO: Integrar submenú de lógica en los siguientes commits
+                    // Módulo C
                     break;
                 case 4:
-                    view.mostrarMensaje("\nSaliendo del sistema SIPRO-LOG. ¡Hasta pronto!");
+                    System.out.println("Saliendo...");
                     break;
                 default:
-                    view.mostrarMensaje("\nOpción inválida. Por favor, intente de nuevo.");
+                    System.out.println("Opción inválida.");
             }
         } while (opcionMenu != 4);
     }

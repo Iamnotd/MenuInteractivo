@@ -1,13 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package org.dereksilvestre.view;
 
-/**
- *
- * @author roxyl
- */
+import java.util.Scanner;
+
 public class OperacionesMatematicasView {
-    
+    private final Scanner scanner;
+
+    public OperacionesMatematicasView() {
+        this.scanner = new Scanner(System.in);
+    }
+
+    public int mostrarSubMenuMatematicas() {
+        System.out.println("\n--- MODULO A: OPERACIONES MATEMATICAS ---");
+        System.out.println("1. Calculadora de Salario");
+        System.out.println("0. Volver al Menú Principal");
+        System.out.print("Seleccione un ejercicio: ");
+        
+        int opcion = scanner.nextInt();
+        scanner.nextLine(); 
+        return opcion;
+    }
+
+ 
+    public double pedirDouble(String mensaje) {
+        System.out.print(mensaje);
+        double valor = scanner.nextDouble();
+        scanner.nextLine();
+        return valor;
+    }
+
+    public void mostrarResultado(String mensaje) {
+        System.out.println(mensaje);
+    }
 }
