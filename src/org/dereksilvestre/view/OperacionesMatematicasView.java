@@ -17,6 +17,7 @@ public class OperacionesMatematicasView {
         System.out.println("4. Convertidor de Temperatura");
         System.out.println("5. Perimetro de Circulo");
         System.out.println("6 Volumen de un cilindro");
+        System.out.println("7. Hipotenusa");
         System.out.println("0. Volver al Menú Principal");
         System.out.print("Seleccione un ejercicio: ");
         

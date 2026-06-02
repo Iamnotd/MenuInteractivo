@@ -20,4 +20,7 @@ public class OperacionesMatematicasController {
     public double calcularVolumenCilindro(double radio, double altura) {
         return Math.PI * Math.pow(radio, 2) * altura;
     }
+    public double calcularHipotenusa(double catetoA, double catetoB) {
+        return Math.sqrt(Math.pow(catetoA, 2) + Math.pow(catetoB,2));
+    }
 }

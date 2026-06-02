@@ -55,6 +55,12 @@ public class Main {
                                 double alturaCilindro = mathView.pedirDouble("Ingrese la altura del cilindro: ");
                                 double volumen = mathCtrl.calcularVolumenCilindro(radioCilindro, alturaCilindro);
                                 mathView.mostrarResultado("-> El volumen del cilinro es: " + volumen);
+                            case 7: 
+                                double catetoA = mathView.pedirDouble("Ingrese la longitud del cateto A: ");
+                                double catetoB = mathView.pedirDouble("Ingrese la longitud del cateto B: ");
+                                double hipotenusa = mathCtrl.calcularHipotenusa(catetoA, catetoB);
+                                mathView.mostrarResultado("-> La longitud de la hipotenusa es: " + hipotenusa);
+                                break;
                             case 0:
                                 break;
                             default:
