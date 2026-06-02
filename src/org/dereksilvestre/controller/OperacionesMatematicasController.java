@@ -11,4 +11,7 @@ public class OperacionesMatematicasController {
     public double calcularPromedio(double nota1, double nota2, double nota3) {
         return (nota1 + nota2 + nota3) / 3.0;
     }
+    public double convertirCelsiusAFahrenheit(double celsius) { 
+        return (celsius * (9.0 / 5.0)) + 32.0;
+    }
 }

@@ -36,9 +36,14 @@ public class Main {
                             case 3:
                                 double nota1 = mathView.pedirDouble("Ingrese la primera calificacion: ");
                                 double nota2 = mathView.pedirDouble("Ingrese la segunda calificacion: ");
-                                double nota3 = mathView.pedirDouble("Ingrese la tercera calificacion");
+                                double nota3 = mathView.pedirDouble("Ingrese la tercera calificacion: ");
                                 double promedio = mathCtrl.calcularPromedio(nota1, nota2, nota3);
                                 mathView.mostrarResultado("-> El promedio academico es: " + promedio);
+                                break;
+                            case 4:
+                                double celsius = mathView.pedirDouble("Ingrese los grados Celsius: ");
+                                double fahrenheit = mathCtrl.convertirCelsiusAFahrenheit(celsius);
+                                mathView.mostrarResultado("-> Equivalente en Fahrenheit: " + fahrenheit + "°F");
                                 break;
                             case 0:
                                 break;
