@@ -45,6 +45,11 @@ public class Main {
                                 double fahrenheit = mathCtrl.convertirCelsiusAFahrenheit(celsius);
                                 mathView.mostrarResultado("-> Equivalente en Fahrenheit: " + fahrenheit + "°F");
                                 break;
+                            case 5: 
+                                double radio = mathView.pedirDouble("Ingrese el radio del circulo: ");
+                                double perimetro = mathCtrl.calcularPerimetroCirculo(radio);
+                                mathView.mostrarResultado("-> El perimetro del circulo es: "+ perimetro);
+                                break;
                             case 0:
                                 break;
                             default:

@@ -14,4 +14,7 @@ public class OperacionesMatematicasController {
     public double convertirCelsiusAFahrenheit(double celsius) { 
         return (celsius * (9.0 / 5.0)) + 32.0;
     }
+    public double calcularPerimetroCirculo(double radio) {
+        return 2.0 * Math.PI * radio;
+    }
 }
