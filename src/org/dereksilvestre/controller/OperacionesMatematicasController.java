@@ -26,4 +26,7 @@ public class OperacionesMatematicasController {
     public double convertirDiasAMinutos(double dias) { 
         return dias * 24.0 * 60.0;
     }
+    public double calcularRestoDivision(double dividendo, double divisor) { 
+        return dividendo % divisor;
+    }
 }

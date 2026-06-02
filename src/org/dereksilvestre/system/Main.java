@@ -62,9 +62,15 @@ public class Main {
                                 mathView.mostrarResultado("-> La longitud de la hipotenusa es: " + hipotenusa);
                                 break;
                             case 8:
-                                double dias = mathView.pedirDouble("Ingrese la cantidad de dias");
+                                double dias = mathView.pedirDouble("Ingrese la cantidad de dias: ");
                                 double minutos = mathCtrl.convertirDiasAMinutos(dias);
                                 mathView.mostrarResultado("-> El equivalente en minutos totales es: " + minutos + " minutos.");
+                                break;
+                            case 9: 
+                                double dividendo = mathView.pedirDouble("Ingrese el dividendo: ");
+                                double divisor = mathView.pedirDouble("Ingrese el divisor: ");
+                                double residuo = mathCtrl.calcularRestoDivision(dividendo, divisor);
+                                mathView.mostrarResultado("-> El resto de la division (modulo) es: " + residuo);
                                 break;
                             case 0:
                                 break;
