@@ -8,6 +8,12 @@ public class OperacionesMatematicasView {
     public OperacionesMatematicasView() {
         this.scanner = new Scanner(System.in);
     }
+    public int pedirInt(String mensaje) {
+        System.out.println(mensaje);
+        int valor = scanner.nextInt();
+        scanner.nextLine();
+        return valor;
+    }
 
     public int mostrarSubMenuMatematicas() {
         System.out.println("\n--- MODULO A: OPERACIONES MATEMATICAS ---");
@@ -20,6 +26,7 @@ public class OperacionesMatematicasView {
         System.out.println("7. Hipotenusa");
         System.out.println("8. Dias a Minutos");
         System.out.println("9. Resto de Division");
+        System.out.println("10. Potencia al cubo");
         System.out.println("0. Volver al Menú Principal");
         System.out.print("Seleccione un ejercicio: ");
         

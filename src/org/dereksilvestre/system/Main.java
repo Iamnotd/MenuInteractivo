@@ -72,6 +72,11 @@ public class Main {
                                 double residuo = mathCtrl.calcularRestoDivision(dividendo, divisor);
                                 mathView.mostrarResultado("-> El resto de la division (modulo) es: " + residuo);
                                 break;
+                            case 10:
+                                int numeroBase = mathView.pedirInt("Ingrese un número entero: ");
+                                int resultadoCubo = mathCtrl.calcularPotenciaAlCubo(numeroBase);
+                                mathView.mostrarResultado("-> El número " + numeroBase + " elevado al cubo es: " + resultadoCubo);
+                                break;
                             case 0:
                                 break;
                             default:

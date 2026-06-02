@@ -29,4 +29,7 @@ public class OperacionesMatematicasController {
     public double calcularRestoDivision(double dividendo, double divisor) { 
         return dividendo % divisor;
     }
-}
+    public int calcularPotenciaAlCubo(int numero) {
+        return numero * numero * numero;
+    }
+ }
