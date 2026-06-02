@@ -61,6 +61,11 @@ public class Main {
                                 double hipotenusa = mathCtrl.calcularHipotenusa(catetoA, catetoB);
                                 mathView.mostrarResultado("-> La longitud de la hipotenusa es: " + hipotenusa);
                                 break;
+                            case 8:
+                                double dias = mathView.pedirDouble("Ingrese la cantidad de dias");
+                                double minutos = mathCtrl.convertirDiasAMinutos(dias);
+                                mathView.mostrarResultado("-> El equivalente en minutos totales es: " + minutos + " minutos.");
+                                break;
                             case 0:
                                 break;
                             default:

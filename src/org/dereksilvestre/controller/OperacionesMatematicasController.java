@@ -23,4 +23,7 @@ public class OperacionesMatematicasController {
     public double calcularHipotenusa(double catetoA, double catetoB) {
         return Math.sqrt(Math.pow(catetoA, 2) + Math.pow(catetoB,2));
     }
+    public double convertirDiasAMinutos(double dias) { 
+        return dias * 24.0 * 60.0;
+    }
 }
