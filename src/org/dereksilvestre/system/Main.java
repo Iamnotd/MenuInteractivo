@@ -50,6 +50,11 @@ public class Main {
                                 double perimetro = mathCtrl.calcularPerimetroCirculo(radio);
                                 mathView.mostrarResultado("-> El perimetro del circulo es: "+ perimetro);
                                 break;
+                            case 6:
+                                double radioCilindro = mathView.pedirDouble("Ingrese el radio del cilindro: ");
+                                double alturaCilindro = mathView.pedirDouble("Ingrese la altura del cilindro: ");
+                                double volumen = mathCtrl.calcularVolumenCilindro(radioCilindro, alturaCilindro);
+                                mathView.mostrarResultado("-> El volumen del cilinro es: " + volumen);
                             case 0:
                                 break;
                             default:

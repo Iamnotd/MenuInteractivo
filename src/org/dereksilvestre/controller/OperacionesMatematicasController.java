@@ -17,4 +17,7 @@ public class OperacionesMatematicasController {
     public double calcularPerimetroCirculo(double radio) {
         return 2.0 * Math.PI * radio;
     }
+    public double calcularVolumenCilindro(double radio, double altura) {
+        return Math.PI * Math.pow(radio, 2) * altura;
+    }
 }
