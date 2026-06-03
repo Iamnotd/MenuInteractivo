@@ -13,6 +13,7 @@ public class LogicaBooleanosView {
         System.out.println("\n--- MÓDULO C: LÓGICA Y BOOLEANOS ---");
         System.out.println("1. Es Mayor de Edad");
         System.out.println("2. Tabla de Verdad AND");
+        System.out.println("3. Tabla de Verdar OR");
         System.out.println("0. Volver al Menú Principal");
         System.out.print("Seleccione un ejercicio: ");
         

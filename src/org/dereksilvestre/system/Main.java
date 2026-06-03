@@ -205,6 +205,14 @@ public class Main {
                                 
                                 logicaView.mostrarResultado("-> Resultado de (" + valor1 + " && " + valor2 + "): " + resultadoAND);
                                 break;
+                            case 3:
+                                boolean v1 = logicaView.pedirBooleano("Ingrese el primer valor");
+                                boolean v2 = logicaView.pedirBooleano("Ingrese el segundo valor");
+                                
+                                boolean resultadoOR = logicaCtrl.evaluarOR(v1, v2);
+                                
+                                logicaView.mostrarResultado("-> Resultado de (" + v1 + " || " + v2 + "): " + resultadoOR);
+                                break;
                             case 0:
                                 break;
                             default:

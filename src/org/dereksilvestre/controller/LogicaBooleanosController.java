@@ -8,4 +8,7 @@ public class LogicaBooleanosController {
     public boolean evaluarAND(boolean a, boolean b) {
         return a && b;
     }
+    public boolean evaluarOR(boolean a, boolean b) {
+        return a || b;
+    }
 }
