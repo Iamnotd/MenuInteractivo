@@ -1,6 +1,8 @@
 package org.dereksilvestre.system;
 
+import org.dereksilvestre.controller.ManipulacionCadenasController;
 import org.dereksilvestre.controller.OperacionesMatematicasController;
+import org.dereksilvestre.view.ManipulacionCadenasView;
 import org.dereksilvestre.view.MenuPrincipalView;
 import org.dereksilvestre.view.OperacionesMatematicasView;
 
@@ -10,6 +12,8 @@ public class Main {
         MenuPrincipalView menuPrincipalView = new MenuPrincipalView(); 
         OperacionesMatematicasView mathView = new OperacionesMatematicasView();
         OperacionesMatematicasController mathCtrl = new OperacionesMatematicasController();
+        ManipulacionCadenasView cadenasView = new ManipulacionCadenasView();
+        ManipulacionCadenasController cadenasCtrl = new ManipulacionCadenasController();
         int opcionMenu;
 
         do {
@@ -84,8 +88,22 @@ public class Main {
                         }
                     } while (ejercicioMath != 0);
                     break;
-                case 2:
-                    // Módulo B
+                case 2: 
+                    int ejercicioCadenas;
+                    do {
+                        ejercicioCadenas = cadenasView.mostrarSubMenuCadenas();
+                        switch (ejercicioCadenas) {
+                            case 11:
+                                String textoInput = cadenasView.pedirString("Ingrese un texto o palabra: ");
+                                int longitud = cadenasCtrl.obtenerLongitudCadena(textoInput);
+                                cadenasView.mostrarResultado("-> La longitud del texto es: " + longitud + " caracteres.");
+                                break;
+                            case 0:
+                                break;
+                            default:
+                                cadenasView.mostrarResultado("Opción no válida en este submódulo.");
+                        }
+                    } while (ejercicioCadenas != 0);
                     break;
                 case 3:
                     // Módulo C
