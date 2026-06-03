@@ -243,6 +243,17 @@ public class Main {
                                     logicaView.mostrarResultado("-> El alumno ha REPROBADO (Falta de nota o de asistencia).");
                                 }
                                 break;
+                            case 7:
+                                int anioEvaluar = logicaView.pedirEntero("Ingrese un año (ej. 2024): ");
+                                
+                                boolean bisiesto = logicaCtrl.esAnioBisiesto(anioEvaluar);
+                                
+                                if (bisiesto) {
+                                    logicaView.mostrarResultado("-> El año " + anioEvaluar + " ES bisiesto (tiene 366 días).");
+                                } else {
+                                    logicaView.mostrarResultado("-> El año " + anioEvaluar + " NO es bisiesto (tiene 365 días).");
+                                }
+                                break;
                             case 0:
                                 break;
                             default:

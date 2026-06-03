@@ -20,4 +20,7 @@ public class LogicaBooleanosController {
     public boolean comprobarAprobacion(double nota, int asistencia) {
         return (nota >= 60) && (asistencia >= 80);
     }
+    public boolean esAnioBisiesto(int anio) {
+        return (anio % 400 == 0) || ((anio % 4 == 0) && (anio % 100 != 0));
+    }
 }
