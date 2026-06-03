@@ -17,4 +17,24 @@ public class ManipulacionCadenasController {
     public int buscarCaracter(String texto, char caracter) {
         return texto.indexOf(caracter);
     }
+    public int contarVocales(String texto) {
+        int contador = 0;
+        String textoMinus = texto.toLowerCase();
+        
+        for (int i = 0; i < textoMinus.length(); i++) {
+            char letra = textoMinus.charAt(i);
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+                contador++;
+            }
+        }
+        return contador;
+    }
+    public int contarPalabras(String texto) {
+        String textoLimpio = texto.trim();
+        if (textoLimpio.isEmpty()) {
+            return 0;
+        }
+        String[] palabras = textoLimpio.split("\\s+");
+        return palabras.length;
+    }
 }

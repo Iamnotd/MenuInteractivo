@@ -127,6 +127,16 @@ public class Main {
                                     cadenasView.mostrarResultado("No ingresó ningun caracter para buscar.");
                                 }
                                 break;
+                            case 6: 
+                                String textoVocales = cadenasView.pedirString("Ingrese una palabra o frase: ");
+                                int totalVocales = cadenasCtrl.contarVocales(textoVocales);
+                                cadenasView.mostrarResultado("-> El texto contiene un total de: " + totalVocales + " vocales.");
+                                break;
+                            case 7:
+                                String fraseInput = cadenasView.pedirString("Ingrese una frase completa: ");
+                                int cantidadPalabras = cadenasCtrl.contarPalabras(fraseInput);
+                                cadenasView.mostrarResultado("-> El total de palabras en la frase es: " + cantidadPalabras);
+                                break;
                             case 0:
                                 break;
                             default:
