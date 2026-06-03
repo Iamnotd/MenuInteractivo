@@ -43,4 +43,7 @@ public class ManipulacionCadenasController {
     public boolean comprobarCadenaVacia(String texto) {
         return texto.trim().isEmpty();
     }
+    public String concatenarCadenas(String cadena1, String cadena2) {
+        return cadena1 + " " + cadena2;
+    }
 }

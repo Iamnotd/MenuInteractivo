@@ -21,6 +21,7 @@ public class ManipulacionCadenasView {
         System.out.println("7. Contar Palabras");
         System.out.println("8. Reemplzar Caracteres");
         System.out.println("9. Comprobar Cadena Vacia");
+        System.out.println("10. Concatenar Cadenas");
         System.out.println("0. Volver al Menú Principal");
         System.out.print("Seleccione un ejercicio: ");
         

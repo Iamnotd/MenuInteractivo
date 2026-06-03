@@ -158,15 +158,23 @@ public class Main {
                                 boolean estaVacia = cadenasCtrl.comprobarCadenaVacia(textoEvaluar);
                                 
                                 if (estaVacia) {
-                                    cadenasView.mostrarResultado("-> La cadena está VACÍA.");
+                                    cadenasView.mostrarResultado("-> La cadena está VACIA.");
                                 } else {
-                                    cadenasView.mostrarResultado("-> La cadena NO está vacía. Contiene texto.");
+                                    cadenasView.mostrarResultado("-> La cadena NO está vacia. Contiene texto.");
                                 }
+                                break;
+                            case 10:
+                                String primeraCadena = cadenasView.pedirString("Ingrese la primera cadena: ");
+                                String segundaCadena = cadenasView.pedirString("Ingrese la segunda cadena: ");
+                                
+                                String resultadoUnion = cadenasCtrl.concatenarCadenas(primeraCadena, segundaCadena);
+                                
+                                cadenasView.mostrarResultado("-> Texto concatenado: " + resultadoUnion);
                                 break;
                             case 0:
                                 break;
                             default:
-                                cadenasView.mostrarResultado("Opción no válida en este submodulo.");
+                                cadenasView.mostrarResultado("Opción no valida en este submodulo.");
                         }
                     } while (ejercicioCadenas != 0);
                     break;
