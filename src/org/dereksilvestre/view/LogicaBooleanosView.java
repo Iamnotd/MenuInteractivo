@@ -15,6 +15,7 @@ public class LogicaBooleanosView {
         System.out.println("2. Tabla de Verdad AND");
         System.out.println("3. Tabla de Verdar OR");
         System.out.println("4. Operador Logico NOT");
+        System.out.println("5. Numero Par y Positivo");
         System.out.println("0. Volver al Menú Principal");
         System.out.print("Seleccione un ejercicio: ");
         

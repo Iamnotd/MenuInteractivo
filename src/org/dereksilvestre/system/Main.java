@@ -220,6 +220,17 @@ public class Main {
                                 
                                 logicaView.mostrarResultado("-> Resultado de !" + valorOriginal + " es: " + resultadoNOT);
                                 break;
+                            case 5:
+                                int numEvaluar = logicaView.pedirEntero("Ingrese un número entero: ");
+                                
+                                boolean parPositivo = logicaCtrl.esParYPositivo(numEvaluar);
+                                
+                                if (parPositivo) {
+                                    logicaView.mostrarResultado("-> El número " + numEvaluar + " Cumple: ES par y positivo.");
+                                } else {
+                                    logicaView.mostrarResultado("-> El número " + numEvaluar + " NO cumple con ambas condiciones (o es negativo, o es impar).");
+                                }
+                                break;
                             case 0:
                                 break;
                             default:

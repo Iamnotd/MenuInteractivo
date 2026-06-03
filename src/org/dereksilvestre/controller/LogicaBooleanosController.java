@@ -14,4 +14,7 @@ public class LogicaBooleanosController {
     public boolean evaluarNOT(boolean valor) {
         return !valor;
     }
+    public boolean esParYPositivo(int numero) {
+        return (numero > 0) && (numero % 2 == 0);
+    }
 }
