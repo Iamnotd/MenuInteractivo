@@ -93,15 +93,20 @@ public class Main {
                     do {
                         ejercicioCadenas = cadenasView.mostrarSubMenuCadenas();
                         switch (ejercicioCadenas) {
-                            case 11:
+                            case 1:
                                 String textoInput = cadenasView.pedirString("Ingrese un texto o palabra: ");
                                 int longitud = cadenasCtrl.obtenerLongitudCadena(textoInput);
                                 cadenasView.mostrarResultado("-> La longitud del texto es: " + longitud + " caracteres.");
                                 break;
+                            case 2:
+                                String textoOriginal = cadenasView.pedirString("Ingrese el texto en minusculas: ");
+                                String textoMayusculas = cadenasCtrl.convertirAMayusculas(textoOriginal);
+                                cadenasView.mostrarResultado("-> Resultado en Mayusculas: " + textoMayusculas);
+                                break;
                             case 0:
                                 break;
                             default:
-                                cadenasView.mostrarResultado("Opción no válida en este submódulo.");
+                                cadenasView.mostrarResultado("Opción no válida en este submodulo.");
                         }
                     } while (ejercicioCadenas != 0);
                     break;
