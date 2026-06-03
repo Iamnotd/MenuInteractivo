@@ -197,7 +197,14 @@ public class Main {
                                     logicaView.mostrarResultado("-> La persona NO es mayor de edad.");
                                 }
                                 break;
+                            case 2:
+                                boolean valor1 = logicaView.pedirBooleano("Ingrese el primer valor");
+                                boolean valor2 = logicaView.pedirBooleano("Ingrese el segundo valor");
                                 
+                                boolean resultadoAND = logicaCtrl.evaluarAND(valor1, valor2);
+                                
+                                logicaView.mostrarResultado("-> Resultado de (" + valor1 + " && " + valor2 + "): " + resultadoAND);
+                                break;
                             case 0:
                                 break;
                             default:

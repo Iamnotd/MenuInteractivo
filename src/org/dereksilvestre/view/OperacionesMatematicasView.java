@@ -27,7 +27,7 @@ public class OperacionesMatematicasView {
         System.out.println("8. Dias a Minutos");
         System.out.println("9. Resto de Division");
         System.out.println("10. Potencia al cubo");
-        System.out.println("0. Volver al Menú Principal");
+        System.out.println("0. Volver al Menu Principal");
         System.out.print("Seleccione un ejercicio: ");
         
         int opcion = scanner.nextInt();
