@@ -40,4 +40,7 @@ public class ManipulacionCadenasController {
     public String reemplazarCaracter(String texto, char antiguo, char nuevo) {
         return texto.replace(antiguo, nuevo);
     }
+    public boolean comprobarCadenaVacia(String texto) {
+        return texto.trim().isEmpty();
+    }
 }

@@ -152,6 +152,17 @@ public class Main {
                                     cadenasView.mostrarResultado("Error: Debe ingresar ambos caracteres para operar.");
                                 }
                                 break;
+                            case 9: 
+                                String textoEvaluar = cadenasView.pedirString("Ingrese el texto a evaluar: ");
+                                
+                                boolean estaVacia = cadenasCtrl.comprobarCadenaVacia(textoEvaluar);
+                                
+                                if (estaVacia) {
+                                    cadenasView.mostrarResultado("-> La cadena está VACÍA.");
+                                } else {
+                                    cadenasView.mostrarResultado("-> La cadena NO está vacía. Contiene texto.");
+                                }
+                                break;
                             case 0:
                                 break;
                             default:
