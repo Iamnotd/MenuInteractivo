@@ -26,4 +26,7 @@ public class LogicaBooleanosController {
     public boolean evaluarAcceso(boolean contraseniaCorrecta, boolean tieneToken) {
         return contraseniaCorrecta || tieneToken;
     }
+    public boolean calcularDescuento(int edad, boolean esMiembro) {
+        return (edad >= 65) || esMiembro;
+    }
 }

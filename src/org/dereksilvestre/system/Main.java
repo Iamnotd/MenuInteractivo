@@ -266,6 +266,20 @@ public class Main {
                                     logicaView.mostrarResultado("-> [ACCESO DENEGADO] Credenciales inválidas.");
                                 }
                                 break;
+                            case 9: 
+                                int edadCliente = logicaView.pedirEntero("Ingrese la edad del cliente: ");
+                                boolean esSocio = logicaView.pedirBooleano("¿El cliente posee membresía VIP?");
+                                
+                                // 2. Evaluamos la lógica comercial mediante el controlador
+                                boolean aplicaDescuento = logicaCtrl.calcularDescuento(edadCliente, esSocio);
+                                
+                                // 3. Mostramos la salida correspondiente
+                                if (aplicaDescuento) {
+                                    logicaView.mostrarResultado("-> [DESCUENTO APLICADO] El cliente recibe el beneficio especial.");
+                                } else {
+                                    logicaView.mostrarResultado("-> [PRECIO REGULAR] El cliente no cumple los requisitos para el descuento.");
+                                }
+                                break;
                             case 0:
                                 break;
                             default:
