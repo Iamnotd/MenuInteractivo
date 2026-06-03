@@ -29,4 +29,7 @@ public class LogicaBooleanosController {
     public boolean calcularDescuento(int edad, boolean esMiembro) {
         return (edad >= 65) || esMiembro;
     }
+    public boolean esMúltiploDe3y5(int numero) {
+        return (numero % 3 == 0) && (numero % 5 == 0);
+    }
 }

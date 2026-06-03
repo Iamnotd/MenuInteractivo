@@ -20,6 +20,7 @@ public class LogicaBooleanosView {
         System.out.println("7. Año Bisiesto");
         System.out.println("8. Acceso Permitido");
         System.out.println("9. Descuento por Tienda");
+        System.out.println("10. Multiplo de 3 y 5 ");
         System.out.println("0. Volver al Menu Principal");
         System.out.print("Seleccione un ejercicio: ");
         

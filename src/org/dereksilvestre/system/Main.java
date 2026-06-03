@@ -270,14 +270,23 @@ public class Main {
                                 int edadCliente = logicaView.pedirEntero("Ingrese la edad del cliente: ");
                                 boolean esSocio = logicaView.pedirBooleano("¿El cliente posee membresía VIP?");
                                 
-                                // 2. Evaluamos la lógica comercial mediante el controlador
                                 boolean aplicaDescuento = logicaCtrl.calcularDescuento(edadCliente, esSocio);
                                 
-                                // 3. Mostramos la salida correspondiente
                                 if (aplicaDescuento) {
                                     logicaView.mostrarResultado("-> [DESCUENTO APLICADO] El cliente recibe el beneficio especial.");
                                 } else {
                                     logicaView.mostrarResultado("-> [PRECIO REGULAR] El cliente no cumple los requisitos para el descuento.");
+                                }
+                                break;
+                            case 10:
+                                int numMultiplo = logicaView.pedirEntero("Ingrese un número entero a evaluar: ");
+                                
+                                boolean esMultiplo = logicaCtrl.esMúltiploDe3y5(numMultiplo);
+                                
+                                if (esMultiplo) {
+                                    logicaView.mostrarResultado("-> El número " + numMultiplo + " ES múltiplo de 3 y 5 a la vez.");
+                                } else {
+                                    logicaView.mostrarResultado("-> El número " + numMultiplo + " NO cumple con ambas divisiones exactas.");
                                 }
                                 break;
                             case 0:
