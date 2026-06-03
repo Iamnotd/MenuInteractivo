@@ -213,6 +213,13 @@ public class Main {
                                 
                                 logicaView.mostrarResultado("-> Resultado de (" + v1 + " || " + v2 + "): " + resultadoOR);
                                 break;
+                            case 4:
+                                boolean valorOriginal = logicaView.pedirBooleano("Ingrese el valor a invertir");
+                                
+                                boolean resultadoNOT = logicaCtrl.evaluarNOT(valorOriginal);
+                                
+                                logicaView.mostrarResultado("-> Resultado de !" + valorOriginal + " es: " + resultadoNOT);
+                                break;
                             case 0:
                                 break;
                             default:
