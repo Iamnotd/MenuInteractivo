@@ -11,4 +11,7 @@ public class ManipulacionCadenasController {
     public String convertirAMinusculas(String texto) {
         return texto.toLowerCase();
     }
+    public String invertirCadena(String texto) { 
+        return new StringBuilder(texto).reverse().toString();
+    }
 }

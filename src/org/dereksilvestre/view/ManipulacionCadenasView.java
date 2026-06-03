@@ -15,6 +15,7 @@ public class ManipulacionCadenasView {
         System.out.println("1. Longitud de una Cadena");
         System.out.println("2. Convertir a Mayusculas");
         System.out.println("3. Convertir a Minusculas");
+        System.out.println("4. Invertir una Cadena");
         System.out.println("0. Volver al Menú Principal");
         System.out.print("Seleccione un ejercicio: ");
         

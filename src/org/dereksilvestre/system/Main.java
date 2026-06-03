@@ -108,6 +108,9 @@ public class Main {
                                 String textoMinusculas = cadenasCtrl.convertirAMinusculas(textoMayus);
                                 cadenasView.mostrarResultado("-> Resultado en Minusculas: " + textoMinusculas);
                                 break;
+                            case 4:
+                                String textoNormal = cadenasView.pedirString("Ingrese el texto a invertir: ");
+                                String textoInvertido = cadenasCtrl.invertirCadena(textoNormal);
                             case 0:
                                 break;
                             default:
