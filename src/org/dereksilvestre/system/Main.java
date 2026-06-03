@@ -231,6 +231,18 @@ public class Main {
                                     logicaView.mostrarResultado("-> El número " + numEvaluar + " NO cumple con ambas condiciones (o es negativo, o es impar).");
                                 }
                                 break;
+                            case 6:
+                                double notaAlumno = logicaView.pedirDecimal("Ingrese la nota del alumno (0-100): ");
+                                int asistenciaAlumno = logicaView.pedirEntero("Ingrese el porcentaje de asistencia (0-100): ");
+                                
+                                boolean aproboCurso = logicaCtrl.comprobarAprobacion(notaAlumno, asistenciaAlumno);
+                                
+                                if (aproboCurso) {
+                                    logicaView.mostrarResultado("-> ¡Felicidades! El alumno ha APROBADO la materia.");
+                                } else {
+                                    logicaView.mostrarResultado("-> El alumno ha REPROBADO (Falta de nota o de asistencia).");
+                                }
+                                break;
                             case 0:
                                 break;
                             default:

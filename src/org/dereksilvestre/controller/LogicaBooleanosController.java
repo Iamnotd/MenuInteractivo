@@ -17,4 +17,7 @@ public class LogicaBooleanosController {
     public boolean esParYPositivo(int numero) {
         return (numero > 0) && (numero % 2 == 0);
     }
+    public boolean comprobarAprobacion(double nota, int asistencia) {
+        return (nota >= 60) && (asistencia >= 80);
+    }
 }

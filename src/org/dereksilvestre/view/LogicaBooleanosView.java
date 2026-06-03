@@ -16,6 +16,7 @@ public class LogicaBooleanosView {
         System.out.println("3. Tabla de Verdar OR");
         System.out.println("4. Operador Logico NOT");
         System.out.println("5. Numero Par y Positivo");
+        System.out.println("6. Aprobo Examen con Condiciones");
         System.out.println("0. Volver al Menú Principal");
         System.out.print("Seleccione un ejercicio: ");
         
@@ -36,5 +37,9 @@ public class LogicaBooleanosView {
 
     public void mostrarResultado(String mensaje) {
         System.out.println(mensaje);
+    }
+    public double pedirDecimal(String mensaje) {
+        System.out.print(mensaje);
+        return scanner.nextDouble();
     }
 }
