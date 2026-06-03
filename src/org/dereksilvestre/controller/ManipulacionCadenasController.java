@@ -8,4 +8,7 @@ public class ManipulacionCadenasController {
     public String convertirAMayusculas(String texto) { 
         return texto.toUpperCase();
     }
+    public String convertirAMinusculas(String texto) {
+        return texto.toLowerCase();
+    }
 }

@@ -103,6 +103,11 @@ public class Main {
                                 String textoMayusculas = cadenasCtrl.convertirAMayusculas(textoOriginal);
                                 cadenasView.mostrarResultado("-> Resultado en Mayusculas: " + textoMayusculas);
                                 break;
+                            case 3: 
+                                String textoMayus = cadenasView.pedirString("Ingrese el texto en MAYUSCULAS: ");
+                                String textoMinusculas = cadenasCtrl.convertirAMinusculas(textoMayus);
+                                cadenasView.mostrarResultado("-> Resultado en Minusculas: " + textoMinusculas);
+                                break;
                             case 0:
                                 break;
                             default:
