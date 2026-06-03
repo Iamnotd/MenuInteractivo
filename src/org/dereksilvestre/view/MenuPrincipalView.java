@@ -18,7 +18,7 @@ public class MenuPrincipalView {
         System.out.println("3. Logica y Booleanos (21-30)");
         System.out.println("4. Salir");
         System.out.println("=======================================");
-        System.out.print("Seleccione una opción: ");
+        System.out.print("Seleccione una opcion: ");
         
         int opcion = scanner.nextInt();
         scanner.nextLine(); 

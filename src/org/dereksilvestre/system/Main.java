@@ -1,7 +1,9 @@
 package org.dereksilvestre.system;
 
+import org.dereksilvestre.controller.LogicaBooleanosController;
 import org.dereksilvestre.controller.ManipulacionCadenasController;
 import org.dereksilvestre.controller.OperacionesMatematicasController;
+import org.dereksilvestre.view.LogicaBooleanosView;
 import org.dereksilvestre.view.ManipulacionCadenasView;
 import org.dereksilvestre.view.MenuPrincipalView;
 import org.dereksilvestre.view.OperacionesMatematicasView;
@@ -14,6 +16,8 @@ public class Main {
         OperacionesMatematicasController mathCtrl = new OperacionesMatematicasController();
         ManipulacionCadenasView cadenasView = new ManipulacionCadenasView();
         ManipulacionCadenasController cadenasCtrl = new ManipulacionCadenasController();
+        LogicaBooleanosView logicaView = new LogicaBooleanosView();
+        LogicaBooleanosController logicaCtrl = new LogicaBooleanosController();
         int opcionMenu;
 
         do {
@@ -179,7 +183,27 @@ public class Main {
                     } while (ejercicioCadenas != 0);
                     break;
                 case 3:
-                    // Módulo C
+                    int ejercicioLogica;
+                    do {
+                        ejercicioLogica = logicaView.mostrarSubMenuLogica();
+                        switch (ejercicioLogica) {
+                            case 1:
+                                int edad = logicaView.pedirEntero("Ingrese la edad a evaluar: ");
+                                boolean resultadoEdad = logicaCtrl.esMayorDeEdad(edad);
+                                
+                                if (resultadoEdad) {
+                                    logicaView.mostrarResultado("-> La persona ES mayor de edad.");
+                                } else {
+                                    logicaView.mostrarResultado("-> La persona NO es mayor de edad.");
+                                }
+                                break;
+                                
+                            case 0:
+                                break;
+                            default:
+                                logicaView.mostrarResultado("Opción no válida en este submódulo.");
+                        }
+                    } while (ejercicioLogica != 0);
                     break;
                 case 4:
                     System.out.println("Saliendo...");
