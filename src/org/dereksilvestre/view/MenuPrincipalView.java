@@ -9,10 +9,6 @@ public class MenuPrincipalView {
         this.scanner = new Scanner(System.in);
     }
 
-    /**
-     * Despliega el Menú Principal del sistema SIPRO-LOG.
-     * @return opción seleccionada por el usuario.
-     */
     public int mostrarMenuPrincipal() {
         System.out.println("\n=======================================");
         System.out.println("          SISTEMA SIPRO-LOG            ");
@@ -25,13 +21,11 @@ public class MenuPrincipalView {
         System.out.print("Seleccione una opción: ");
         
         int opcion = scanner.nextInt();
-        scanner.nextLine(); // Limpieza crucial del buffer (salto de línea)
+        scanner.nextLine(); 
         return opcion;
     }
 
-    /**
-     * Muestra un mensaje simple en la consola.
-     */
+
     public void mostrarMensaje(String mensaje) {
         System.out.println(mensaje);
     }

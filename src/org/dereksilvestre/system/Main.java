@@ -111,6 +111,22 @@ public class Main {
                             case 4:
                                 String textoNormal = cadenasView.pedirString("Ingrese el texto a invertir: ");
                                 String textoInvertido = cadenasCtrl.invertirCadena(textoNormal);
+                                break;
+                            case 5:
+                                String textoBase = cadenasView.pedirString("Ingrese el texto base: ");
+                                String caracterInput = cadenasView.pedirString("Ingrese el unico caracter a buscar: ");
+                                if (!caracterInput.isEmpty()) {
+                                    char letra = caracterInput.charAt(0); 
+                                    int posicion = cadenasCtrl.buscarCaracter(textoBase, letra);
+                                    if (posicion != -1) {
+                                        cadenasView.mostrarResultado("-> El caracter '" + letra + "' se encuentra en el indice: " + posicion);
+                                    } else {
+                                        cadenasView.mostrarResultado("-> El caracter '" + letra + "' no fue encontrado en el texto.");
+                                    }
+                                } else {
+                                    cadenasView.mostrarResultado("No ingresó ningun caracter para buscar.");
+                                }
+                                break;
                             case 0:
                                 break;
                             default:

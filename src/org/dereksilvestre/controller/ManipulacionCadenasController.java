@@ -14,4 +14,7 @@ public class ManipulacionCadenasController {
     public String invertirCadena(String texto) { 
         return new StringBuilder(texto).reverse().toString();
     }
+    public int buscarCaracter(String texto, char caracter) {
+        return texto.indexOf(caracter);
+    }
 }
