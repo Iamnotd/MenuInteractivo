@@ -37,4 +37,7 @@ public class ManipulacionCadenasController {
         String[] palabras = textoLimpio.split("\\s+");
         return palabras.length;
     }
+    public String reemplazarCaracter(String texto, char antiguo, char nuevo) {
+        return texto.replace(antiguo, nuevo);
+    }
 }

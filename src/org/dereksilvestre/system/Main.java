@@ -137,6 +137,21 @@ public class Main {
                                 int cantidadPalabras = cadenasCtrl.contarPalabras(fraseInput);
                                 cadenasView.mostrarResultado("-> El total de palabras en la frase es: " + cantidadPalabras);
                                 break;
+                            case 8: 
+                                String textoBase18 = cadenasView.pedirString("Ingrese el texto original: ");
+                                String charAntiguoInput = cadenasView.pedirString("Ingrese el caracter a reemplazar: ");
+                                String charNuevoInput = cadenasView.pedirString("Ingrese el nuevo caracter sustituto: ");
+                                if (!charAntiguoInput.isEmpty() && !charNuevoInput.isEmpty()) {
+                                    char antiguo = charAntiguoInput.charAt(0);
+                                    char nuevo = charNuevoInput.charAt(0);
+                                    
+                                    String textoModificado = cadenasCtrl.reemplazarCaracter(textoBase18, antiguo, nuevo);
+                                    
+                                    cadenasView.mostrarResultado("-> Texto modificado: " + textoModificado);
+                                } else {
+                                    cadenasView.mostrarResultado("Error: Debe ingresar ambos caracteres para operar.");
+                                }
+                                break;
                             case 0:
                                 break;
                             default:
