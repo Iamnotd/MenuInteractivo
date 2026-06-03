@@ -18,6 +18,7 @@ public class LogicaBooleanosView {
         System.out.println("5. Numero Par y Positivo");
         System.out.println("6. Aprobo Examen con Condiciones");
         System.out.println("7. Año Bisiesto");
+        System.out.println("8. Acceso Permitido");
         System.out.println("0. Volver al Menú Principal");
         System.out.print("Seleccione un ejercicio: ");
         

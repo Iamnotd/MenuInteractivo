@@ -254,6 +254,18 @@ public class Main {
                                     logicaView.mostrarResultado("-> El año " + anioEvaluar + " NO es bisiesto (tiene 365 días).");
                                 }
                                 break;
+                            case 8:
+                                boolean claveOk = logicaView.pedirBooleano("¿La contraseña ingresada es correcta?");
+                                boolean tokenOk = logicaView.pedirBooleano("¿El usuario posee un token físico válido?");
+                                
+                                boolean accesoPermitido = logicaCtrl.evaluarAcceso(claveOk, tokenOk);
+                                
+                                if (accesoPermitido) {
+                                    logicaView.mostrarResultado("-> [ACCESO CONCEDIDO] Bienvenido al sistema.");
+                                } else {
+                                    logicaView.mostrarResultado("-> [ACCESO DENEGADO] Credenciales inválidas.");
+                                }
+                                break;
                             case 0:
                                 break;
                             default:
